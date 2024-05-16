@@ -2,6 +2,8 @@ import { useFonts } from "expo-font";
 import Home from "./screens/Home";
 import AboutUs from "./screens/AboutUs";
 import Adoption from "./screens/Adoption";
+import CheckList from "./screens/CheckList";
+import Help from "./screens/Help";
 
 const App = () => {
   const [fontsLoaded] = useFonts({
@@ -26,7 +28,13 @@ const App = () => {
   }
 
   return (
-    <Adoption />
+    <>
+      {/* <Home /> */}
+      {/* <AboutUs /> */}
+      {/* <Adoption /> */}
+      {/* <CheckList /> */}
+      <Help />
+    </>
   );
 };
 

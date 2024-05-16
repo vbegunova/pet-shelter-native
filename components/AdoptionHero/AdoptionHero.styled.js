@@ -5,6 +5,10 @@ export const styles = StyleSheet.create({
     paddingTop: 112,
     paddingBottom: 27,
     overflow: 'hidden',
+    shadowOffset: { width: 0, height: -5 },
+    shadowColor: '#000',
+    shadowOpacity: 0.15,
+    shadowRadius: 114,
   },
   container: {
     alignItems: 'center',
@@ -14,7 +18,7 @@ export const styles = StyleSheet.create({
     paddingBottom: 72,
     paddingTop: 46,
     paddingHorizontal: 10,
-    backgroundColor: "#AB7CE9", // Змініть на потрібний колір
+    backgroundColor: "#AB7CE9",
     borderRadius: 30,
     marginBottom: 72,
     alignItems: 'center',
