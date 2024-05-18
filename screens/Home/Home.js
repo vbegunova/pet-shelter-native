@@ -8,13 +8,15 @@ import HomeFindFriend from "../../components/HomeFindFriend";
 
 const Home = () => {
   return (
-    <ScrollView style={{ backgroundColor: "#AB7CE9" }}>
-      <HomeHero />
-      <FindFriend />
-      <BlogSection />
-      <NewsSection />
-      <HomeFindFriend />
-    </ScrollView>
+    <>
+      <ScrollView style={{ backgroundColor: "#AB7CE9" }}>
+        <HomeHero />
+        <FindFriend />
+        <BlogSection />
+        <NewsSection />
+        <HomeFindFriend />
+      </ScrollView>
+    </>
   );
 };
 

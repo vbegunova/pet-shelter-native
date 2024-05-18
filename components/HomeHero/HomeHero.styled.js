@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   sectionHero: {
-    paddingTop: 186,
+    paddingTop: 106,
     paddingBottom: 47,
     overflowX: "hidden",
   },

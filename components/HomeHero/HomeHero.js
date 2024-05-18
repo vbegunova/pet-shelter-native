@@ -1,8 +1,11 @@
 import React from "react";
-import {  View, Text, TouchableOpacity, Image } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
+import { useNavigation } from '@react-navigation/native';
 import { styles } from "./HomeHero.styled";
 
 const HomeHero = () => {
+  const navigation = useNavigation();
+  
   return (
     <View style={styles.sectionHero}>
       <View style={styles.heroContainer}>
@@ -47,7 +50,7 @@ const HomeHero = () => {
         />
         <TouchableOpacity
           style={styles.styledLink}
-          onPress={() => console.log("Button pressed")}
+          onPress={() => navigation.navigate("Help")}
         >
           <Text style={styles.styledLinkText}>Дізнатись більше</Text>
         </TouchableOpacity>

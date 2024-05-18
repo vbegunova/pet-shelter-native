@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
   section: {
-    paddingTop: 112,
+    paddingTop: 80,
     paddingBottom: 27,
     overflow: 'hidden',
     shadowOffset: { width: 0, height: -5 },

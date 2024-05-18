@@ -6,12 +6,14 @@ import GrantLove from "../../components/GrantLove";
 
 const Help = () => {
   return (
-    <ScrollView style={{ backgroundColor: "#AB7CE9" }}>
-      <HelpHero />
-      <HelpPresentSection />
-      <HelpWithThings />
-      <GrantLove />
-    </ScrollView>
+    <>
+      <ScrollView style={{ backgroundColor: "#AB7CE9" }}>
+        <HelpHero />
+        <HelpPresentSection />
+        <HelpWithThings />
+        <GrantLove />
+      </ScrollView>
+    </>
   );
 };
 
