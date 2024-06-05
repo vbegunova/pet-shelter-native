@@ -1,8 +1,11 @@
-import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
-import { styles } from './AdoptionHelp.styled';
+import React from "react";
+import { View, Text, TouchableOpacity } from "react-native";
+import { styles } from "./AdoptionHelp.styled";
+import { useNavigation } from "@react-navigation/native";
 
 const AdoptionHelp = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.section}>
       <View style={styles.container}>
@@ -19,10 +22,11 @@ const AdoptionHelp = () => {
           <Text style={styles.item}>Допомогти речами.</Text>
           <Text style={styles.item}>Стати волонтером.</Text>
         </View>
-        <TouchableOpacity style={styles.moreBtn} onPress={() => console.log("Дізнатись більше")}>
-          <Text style={styles.moreBtnText}>
-            Дізнатись більше
-          </Text>
+        <TouchableOpacity
+          style={styles.moreBtn}
+          onPress={() => navigation.navigate("Help")}
+        >
+          <Text style={styles.moreBtnText}>Дізнатись більше</Text>
         </TouchableOpacity>
       </View>
     </View>

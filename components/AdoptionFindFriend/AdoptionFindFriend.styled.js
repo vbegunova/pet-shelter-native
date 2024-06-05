@@ -49,4 +49,34 @@ export const styles = StyleSheet.create({
     letterSpacing: -0.3,
     fontSize: 13,
   },
+  paginationWrapper: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginVertical: 20,
+    paddingHorizontal: 15,
+  },
+  paginationButton: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    borderWidth: 4,
+    borderColor: '#FE3FA0',
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'transparent',
+  },
+  paginationIcon: {
+    width: 18,
+    height: 18,
+  },
+  paginationText: {
+    fontFamily: 'eUkraine-Medium',
+    fontWeight: '500',
+    color: '#250C46',
+    marginHorizontal: 15,
+  },
+  disabledButton: {
+    opacity: 0.4,
+  },
 });

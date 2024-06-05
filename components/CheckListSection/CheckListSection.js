@@ -1,8 +1,11 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { styles } from "./CheckListSection.styled";
+import { useNavigation } from "@react-navigation/native";
 
 const CheckListSection = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.section}>
       <Text style={styles.title}>Чек-ліст відповідальної адопції хвостика</Text>
@@ -42,7 +45,7 @@ const CheckListSection = () => {
 
         <TouchableOpacity
           style={styles.button}
-          onPress={() => console.log("Детальніше")}
+          onPress={() => navigation.navigate('CheckList')}
         >
           <Text style={styles.buttonText}>Детальніше</Text>
         </TouchableOpacity>

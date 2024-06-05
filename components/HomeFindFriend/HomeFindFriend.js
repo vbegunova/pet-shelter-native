@@ -1,8 +1,11 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, Image } from 'react-native';
 import { styles } from './HomeFindFriend.styled';
+import { useNavigation } from '@react-navigation/native';
 
 const HomeFindFriend = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.section}>
       <View style={styles.container}>
@@ -28,7 +31,7 @@ const HomeFindFriend = () => {
         </Text>
         <TouchableOpacity
           style={styles.button}
-          // onPress={() => navigation.navigate('Adoption')}
+          onPress={() => navigation.navigate('Adoption')}
           >
           <Text style={styles.buttonText}>Підібрати друга</Text>
         </TouchableOpacity>

@@ -1,8 +1,11 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import { styles } from "./CheckListKeyPoints.styled";
+import { useNavigation } from "@react-navigation/native";
 
 const CheckListKeyPoints = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.section}>
       <View style={styles.container}>
@@ -21,8 +24,13 @@ const CheckListKeyPoints = () => {
               Ми не віддаємо тварин третім особам, на подарунки, а також для
               охорони підприємств.
             </Text>
-            <TouchableOpacity style={styles.styledLink}>
-              <Text style={styles.styledLinkText}>Перейти до підбору хвостика</Text>
+            <TouchableOpacity
+              style={styles.styledLink}
+              onPress={() => navigation.navigate("Adoption")}
+            >
+              <Text style={styles.styledLinkText}>
+                Перейти до підбору хвостика
+              </Text>
             </TouchableOpacity>
           </View>
           <Image

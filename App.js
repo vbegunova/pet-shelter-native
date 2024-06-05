@@ -11,6 +11,8 @@ import AboutUs from "./screens/AboutUs";
 import Adoption from "./screens/Adoption";
 import CheckList from "./screens/CheckList";
 import Help from "./screens/Help";
+import PetPage from "./screens/PetPage";
+import Contacts from "./screens/Contacts";
 
 const Drawer = createDrawerNavigator();
 
@@ -55,6 +57,12 @@ const CustomDrawerContent = ({ navigation, state }) => {
       >
         <Text style={getMenuItemStyle("Help")}>Як допомогти</Text>
       </TouchableOpacity>
+      {/* <TouchableOpacity
+        style={styles.menuItem}
+        onPress={() => navigation.navigate("Contacts")}
+      >
+        <Text style={getMenuItemStyle("Contacts")}>Контакти</Text>
+      </TouchableOpacity> */}
     </View>
   );
 };
@@ -228,6 +236,62 @@ const App = () => {
               >
                 <Image
                   source={require("./assets/images/paw-menu-white.png")}
+                  style={styles.headerRightImage}
+                />
+              </TouchableOpacity>
+            ),
+          })}
+        />
+        <Drawer.Screen
+          name="PetPage"
+          component={PetPage}
+          options={({ navigation }) => ({
+            title: "Інформація про тварину",
+            headerStyle: styles.headerStyleLight,
+            headerTitleStyle: styles.headerTitleStyle,
+            headerLeft: () => (
+              <TouchableOpacity
+                onPress={() => navigation.navigate("Home")}
+                style={styles.headerLeft}
+              >
+                <Text style={styles.headerLeftTextDark}>PetCat</Text>
+              </TouchableOpacity>
+            ),
+            headerRight: () => (
+              <TouchableOpacity
+                onPress={() => navigation.openDrawer()}
+                style={styles.headerRightDark}
+              >
+                <Image
+                  source={require("./assets/images/paw-menu.png")}
+                  style={styles.headerRightImage}
+                />
+              </TouchableOpacity>
+            ),
+          })}
+        />
+        <Drawer.Screen
+          name="Contacts"
+          component={Contacts}
+          options={({ navigation }) => ({
+            title: "Контакти",
+            headerStyle: styles.headerStyleLight,
+            headerTitleStyle: styles.headerTitleStyle,
+            headerLeft: () => (
+              <TouchableOpacity
+                onPress={() => navigation.navigate("Contacts")}
+                style={styles.headerLeft}
+              >
+                <Text style={styles.headerLeftTextDark}>PetCat</Text>
+              </TouchableOpacity>
+            ),
+            headerRight: () => (
+              <TouchableOpacity
+                onPress={() => navigation.openDrawer()}
+                style={styles.headerRightDark}
+              >
+                <Image
+                  source={require("./assets/images/paw-menu.png")}
                   style={styles.headerRightImage}
                 />
               </TouchableOpacity>

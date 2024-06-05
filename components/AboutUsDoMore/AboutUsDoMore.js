@@ -1,8 +1,11 @@
 import React from "react";
 import { View, Text, TouchableOpacity, Image } from "react-native";
 import { styles } from "./AboutUsDoMore.styled";
+import { useNavigation } from "@react-navigation/native";
 
 const AboutUsDoMore = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.section}>
       <View style={styles.container}>
@@ -23,7 +26,7 @@ const AboutUsDoMore = () => {
             </View>
           </View>
           <View>
-            <TouchableOpacity style={styles.button} onPress={() => {}}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Help')}>
               <Text style={styles.buttonText}>Дізнатись більше</Text>
             </TouchableOpacity>
             <View style={styles.imageBox}>

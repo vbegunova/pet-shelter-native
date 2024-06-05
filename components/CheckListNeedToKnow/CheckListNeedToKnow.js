@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
-// import { useNavigation } from "@react-navigation/native"; // Make sure to set up React Navigation in your project
+import { useNavigation } from "@react-navigation/native";
 import { styles } from "./CheckListNeedToKnow.styled";
 
 const CheckListNeedToKnow = () => {
-  // const navigation = useNavigation(); // Using React Navigation for navigation
+  const navigation = useNavigation();
 
   return (
     <View style={styles.section}>
@@ -13,7 +13,7 @@ const CheckListNeedToKnow = () => {
         <View>
           <View style={styles.imageBox}>
             <Image
-              source={require("../../assets/images/check-list-help.png")} // Use local or network image
+              source={require("../../assets/images/check-list-help.png")}
               style={styles.image}
               resizeMode="contain"
             />
@@ -31,7 +31,7 @@ const CheckListNeedToKnow = () => {
             </View>
             <TouchableOpacity
               style={styles.button}
-              // onPress={() => navigation.navigate("Help")} // Adjust the route name according to your configuration
+              onPress={() => navigation.navigate("Help")} 
             >
               <Text style={styles.buttonText}>Дізнатись більше</Text>
             </TouchableOpacity>
